@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-10 col-offset-1">
+      <div class="card flex-md-row mb-4 box-shadow h-md-250">
+        <div class="card-body">
+          <h3 class="card-title"><%= @cocktail.name %></h3><br>
+          <p class="card-text">
+          <p>
+            <h4>Ingredients</h4>
+            <% @cocktail.doses.each do |dose| %>
+              <strong><%= dose.ingredient.name %></strong> - <%= dose.description %><br>
+            <% end %>
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+<%= link_to 'Edit', edit_cocktail_path(@cocktail) %> |
+<%= link_to 'Back', cocktails_path %>

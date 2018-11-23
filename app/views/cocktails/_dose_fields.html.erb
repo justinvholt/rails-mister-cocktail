@@ -1,0 +1,12 @@
+<!-- .nested-fields -->
+<div class="row">
+  <div class="col-xs-5">
+    <%= f.association :ingredient, as: :select, collection: Ingredient.order(:name), prompt: 'Select an Ingredient' %>
+  </div>
+  <div class="col-xs-6">
+    <%= f.input :description %>
+  </div>
+  <div class="col-xs-1">
+    <%= f.remove_nested_fields_link %>
+  </div>
+</div>

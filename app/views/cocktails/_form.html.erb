@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <!-- <form> -->
+      <%= simple_form_for @cocktail do |f|%>
+
+      <div class="form-group col-sm-10 col-sm-offset-1">
+        <%= f.input :name %>
+      </div>
+
+        <div class="form-group col-sm-10 col-sm-offset-1">
+          <%= f.simple_fields_for :doses do |builder| %>
+            <%= render 'dose_fields', f: builder %>
+          <% end %>
+        </div>
+
+
+      <div class="form-group col-sm-10 col-sm-offset-1">
+        <%= link_to_add_fields "Add an ingredient", f, :doses %><br>
+      </div>
+
+      <div class="form-group">
+        <%= f.button :submit %>
+      </div>
+
+      <% end %>
+
+    <!-- </form> -->
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cocktails</h1>
+
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title"><%= cocktail.name %></h4><br>
+            <p class="card-text">
+              <%= link_to 'Show', cocktail %> |
+              <%= link_to 'Edit', edit_cocktail_path(cocktail) %> |
+              <%= link_to 'Destroy', cocktail, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<br>
+
+<%= link_to 'New Cocktail', new_cocktail_path %>

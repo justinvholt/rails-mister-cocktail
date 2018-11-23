@@ -41,12 +41,17 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'autoprefixer-rails'
 gem 'awesome_print'
 gem 'bootstrap-sass', '~> 3.3.7'
+gem 'carrierwave', '~> 1.2'
+gem 'cloudinary', '~> 1.9.1'
+gem "cocoon"
+gem 'dotenv-rails', groups: [:development, :test]
 gem 'font-awesome-sass', '~> 5.0.9'
+gem 'nested_form_fields'
 gem 'simple_form'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry-byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
 group :development do

@@ -13,3 +13,30 @@
 @import "layouts/index";
 @import "components/index";
 @import "pages/index";
+
+body {
+  background-color: whitesmoke;
+}
+
+.card {
+  background-color: white !important;
+  padding: 10px !important;
+  margin: 10px;
+  border-radius: 3% !important;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2) !important;
+  transition: 0.3s !important;
+}
+
+.card-body {
+  padding: 20px 25px !important;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+    padding: 2px 16px;
+}
